@@ -1,111 +1,93 @@
-# Expense Splitter App
+# Expense Sharing App
 
-## Project Overview
+A user-friendly application for managing and sharing expenses among group members, built with React and Tailwind CSS. The app supports light and dark modes with smooth transitions for an enhanced user experience.
 
-Expense Splitter is a simple React application designed to help groups track and split shared expenses easily. This MVP (Minimum Viable Product) allows users to add expenses, select payers, and automatically calculate individual balances.
+---
 
 ## Features
 
-- Add expenses with name and total amount
-- Select payer from group members
-- Automatically split expenses evenly
-- Real-time balance tracking
-- Responsive design with Tailwind CSS
-- In-memory expense management
+- **Add and Manage Expenses:**
+  - Input fields for adding expenses, specifying the payer, and splitting costs among members.
+  - Displays a detailed expense history in a responsive list view.
 
-## Technologies Used
+- **Track Member Balances:**
+  - Real-time balance updates for each member based on added expenses.
+  - Visual indicators for positive, negative, or neutral balances.
 
-- React.js
-- Tailwind CSS
-- JavaScript
+- **Theme Toggle:**
+  - Supports light and dark modes with a toggle button using `lucide-react` icons.
+  - Smooth transitions between themes powered by Tailwind CSS.
 
-## Prerequisites
+- **Responsive Design:**
+  - Optimized layout with grid-based components for desktop and mobile screens.
 
-- Node.js (v14 or later)
-- npm (v6 or later)
+---
 
-## Installation Steps
+## Widgets/Components Used
+
+### Input Fields
+- Used in the `ExpenseForm` component to collect expense details like name, amount, and payer.
+
+### Button Components
+- Used for adding members, submitting expenses, and toggling the theme.
+
+### List Components
+- `ExpenseList`: Displays a history of expenses.
+- `BalanceSummary`: Shows individual balances for each member.
+
+### Icons (Lucide-react)
+- Sun and moon icons are used for the theme toggle functionality.
+
+### Card Components
+- Used to display organized sections like expense history and balance summary.
+
+---
+
+## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/expense-splitter.git
-cd expense-splitter
-```
+   ```bash
+   git clone https://github.com/meetz016/expense-sharing-app.git
+   cd expense-sharing-app
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Install Tailwind CSS:
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-4. Start the development server:
-```bash
-npm start
-```
+---
 
-## Project Structure
+## Folder Structure
 
 ```
-expense-splitter/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── ExpenseForm.js
-│   │   ├── ExpenseList.js
-│   │   └── BalanceSummary.js
-│   ├── App.js
-│   ├── index.js
-│   └── index.css
-├── tailwind.config.js
-└── package.json
+src/
+├── components/
+│   ├── ExpenseForm.jsx
+│   ├── ExpenseList.jsx
+│   ├── BalanceSummary.jsx
+│   ├── ThemeToggle.jsx
+├── App.jsx
+├── index.css
+└── index.js
 ```
 
-## Key Components
+---
 
-- **App.js**: Main application component managing state
-- **ExpenseForm.js**: Form for adding new expenses
-- **ExpenseList.js**: Displays expense history
-- **BalanceSummary.js**: Shows individual member balances
+## Styling and Animations
 
-## How It Works
+- **Tailwind CSS:** Used for consistent styling throughout the application.
+- **Theme Transition:** Tailwind's `duration-200` utility ensures smooth animations for theme changes and other interactions.
 
-1. Add an expense by entering:
-   - Expense name
-   - Total amount
-   - Select the payer
+---
 
-2. The app automatically:
-   - Splits the expense equally among members
-   - Updates individual balances
-   - Tracks expense history
+## Contributing
 
-## Customization
+Contributions are welcome! Feel free to fork this repository and submit a pull request.
 
-- Modify `members` array in `App.js` to change group members
-- Adjust Tailwind CSS in `tailwind.config.js` for custom styling
-
-## Limitations
-
-- In-memory storage (expenses reset on page refresh)
-- No persistent data storage
-- Simple equal splitting algorithm
-
-## Future Improvements
-
-- Add persistent storage
-- Implement more complex splitting algorithms
-- Add user authentication
-- Create ability to add/remove group members
-
-## License
-
-This project is open-source and available under the MIT License.
-
-## Contact
-
-Created for internship task demonstration.
+---
